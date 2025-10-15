@@ -44,7 +44,7 @@ export default function PayPage() {
         {waiting && (
           <div className="w-full flex flex-col items-center">
             <div className="mb-4 w-full bg-blue-100 text-blue-700 rounded p-3 text-center animate-pulse">지문 인식 중입니다...</div>
-            <FingerprintStatus onComplete={onFPDone} autoStart />
+            <FingerprintStatus onComplete={onFPDone} />
           </div>
         )}
         <hr className="w-full my-4 border-gray-200" />

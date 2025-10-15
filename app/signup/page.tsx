@@ -1,9 +1,9 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import FingerprintStatus from '../../components/FingerprintStatus'
 import { postJson } from '../../lib/api'
 import type { FingerPayload } from '../../lib/fingerprint'
-import { useRouter } from 'next/navigation'
 
 export default function SignupPage() {
   const [phoneTail, setPhoneTail] = useState('')
@@ -51,7 +51,7 @@ export default function SignupPage() {
         {showFP && (
           <div className="w-full flex flex-col items-center">
             <div className="mb-4 w-full bg-blue-100 text-blue-700 rounded p-3 text-center animate-pulse">지문 인식 중입니다...</div>
-            <FingerprintStatus onComplete={onFPDone} autoStart />
+            <FingerprintStatus onComplete={onFPDone} />
           </div>
         )}
       </div>
